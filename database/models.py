@@ -1,8 +1,8 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column
+from .database import Base
 
-
-class Tasks(DeclarativeBase):
-    __tablename__ = 'tasks'
+class Tasks(Base):
+    __tablename__ = 'tasks_pomodoro'
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
@@ -10,8 +10,8 @@ class Tasks(DeclarativeBase):
     category_id: Mapped[int]
 
 
-class Categories(DeclarativeBase):
-    __tablename__ = 'Categories'
+class Categories(Base):
+    __tablename__ = 'Categories_pomodoro'
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
