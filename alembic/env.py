@@ -27,6 +27,7 @@ if config.config_file_name is not None:
 # Добавьте MetaData вашего модуля здесь
 target_metadata = Base.metadata
 
+
 # Двигатель конфигурации
 def run_migrations_offline():
     """Run migrations in 'offline' mode."""
